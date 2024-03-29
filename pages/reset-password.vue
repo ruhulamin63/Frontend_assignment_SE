@@ -5,7 +5,7 @@
       <div class="card">
         <div class="card-body login-card-body">
           <div class="login-logo">
-            <img src="../images/bteb-logo.png" alt="logo" class="img-fluid" />
+            <img src="../images/soft_zeno.png" alt="logo" class="img-fluid" />
           </div>
           <p class="login-box-msg">
             You forgot your password? Here you can easily retrieve a new

@@ -8,7 +8,7 @@ const { preloader } = defineProps({
     <div v-if="preloader" class="preloader flex-column justify-content-center align-items-center">
         <img 
           class="animation__shake" 
-          src="/images/bteb-logo.png"
+          src="/images/soft_zeno.png"
           alt="logo" 
           height="60" 
           width="60"

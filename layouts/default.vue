@@ -17,7 +17,7 @@
   <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed" @click="clicked">
     <div class="wrapper">
       <!-- Preloader -->
-      <common-preloader :preloader="preloader"></common-preloader>
+      <!-- <common-preloader :preloader="preloader"></common-preloader> -->
       
       <!-- Navbar -->
       <common-navbar></common-navbar>

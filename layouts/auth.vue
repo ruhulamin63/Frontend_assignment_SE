@@ -8,7 +8,7 @@
 </script>
 
 <template>
-  <common-preloader :preloader="preloader"></common-preloader>
+  <!-- <common-preloader :preloader="preloader"></common-preloader> -->
 
   <slot />
 

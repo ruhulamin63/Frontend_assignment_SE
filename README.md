@@ -23,6 +23,12 @@ npm run dev
 ```bash
 http://127.0.0.1:3000
 ```
+
+### Login Creadentials
+```bash
+username: admin@example.com
+password: password
+```
 #### ======== Enjoy coding ===============
 
 *** Copyright@reserved by Ruhul Amin ***

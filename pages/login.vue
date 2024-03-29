@@ -12,10 +12,10 @@
               :initial-values="list"
             >
               <div class="login-logo">
-                <img src="../../images/bteb-logo.png" alt="logo" class="img-fluid" />
+                <img src="../../images/soft_zeno.png" alt="logo" class="img-fluid" />
               </div>
 
-              <span class="project-name">e-RPL platforms for Skills Assessment and Certification</span>
+              <span class="project-name">Assignment (Software Engineer)</span>
               
               <div class="input-group">
                 <Field
@@ -79,7 +79,7 @@
 
 <script setup>
   useHead({
-    title: "e-RPL platforms",
+    title: "Technical Test - Login",
   });
 
   definePageMeta({
