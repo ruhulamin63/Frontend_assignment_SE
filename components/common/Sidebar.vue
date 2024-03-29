@@ -71,46 +71,46 @@
             </ul>
           </li>
 
-          <li
-            class="nav-item"
-            v-if="
-              checkPermissions([
-                'user_access',
-                'roles_access',
-              ])
-            "
-          >
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cogs"></i>
-              <p>
-                Settings
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
+<!--          <li-->
+<!--            class="nav-item"-->
+<!--            v-if="-->
+<!--              checkPermissions([-->
+<!--                'user_access',-->
+<!--                'roles_access',-->
+<!--              ])-->
+<!--            "-->
+<!--          >-->
+<!--            <a href="#" class="nav-link">-->
+<!--              <i class="nav-icon fas fa-cogs"></i>-->
+<!--              <p>-->
+<!--                Settings-->
+<!--                <i class="right fas fa-angle-left"></i>-->
+<!--              </p>-->
+<!--            </a>-->
 
-            <ul
-              class="nav nav-treeview"
-              v-if="checkPermissions(['roles_access'])"
-            >
-              <li class="nav-item">
-                <NuxtLink class="nav-link" to="/roles">
-                  <i class="fas fa-users"></i>
-                  <p>Roles</p>
-                </NuxtLink>
-              </li>
-            </ul>
-            <ul
-              class="nav nav-treeview"
-              v-if="checkPermissions(['user_access'])"
-            >
-              <li class="nav-item">
-                <NuxtLink class="nav-link" to="/users">
-                  <i class="fas fa-users"></i>
-                  <p>Users</p>
-                </NuxtLink>
-              </li>
-            </ul>
-          </li>
+<!--            <ul-->
+<!--              class="nav nav-treeview"-->
+<!--              v-if="checkPermissions(['roles_access'])"-->
+<!--            >-->
+<!--              <li class="nav-item">-->
+<!--                <NuxtLink class="nav-link" to="/roles">-->
+<!--                  <i class="fas fa-users"></i>-->
+<!--                  <p>Roles</p>-->
+<!--                </NuxtLink>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--            <ul-->
+<!--              class="nav nav-treeview"-->
+<!--              v-if="checkPermissions(['user_access'])"-->
+<!--            >-->
+<!--              <li class="nav-item">-->
+<!--                <NuxtLink class="nav-link" to="/users">-->
+<!--                  <i class="fas fa-users"></i>-->
+<!--                  <p>Users</p>-->
+<!--                </NuxtLink>-->
+<!--              </li>-->
+<!--            </ul>-->
+<!--          </li>-->
 
         </ul>
       </nav>

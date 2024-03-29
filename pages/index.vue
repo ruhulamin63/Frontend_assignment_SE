@@ -32,6 +32,63 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
+
+          <div class="col-md-12">
+            <div class="row float-right">
+              <label>Filter</label>
+              <Toggle
+                  class="toggle-button ml-2"
+                  v-model="value"
+                  :name="'toggle'"
+                  :id="'toggle'"
+                  :onLabel="'On'"
+                  :offLabel="'Off'"
+                  :trueValue="true"
+                  :falseValue="false"
+                  :disabled="false"
+                  :required="false"
+                  @change="toggle()"
+              />
+            </div>
+
+            <div class="row" v-if="filterShow">
+              <div
+                  class="col-md-3 col-sm-3 col-xs-4"
+              >
+                <div class="form-group">
+                  <multiselect
+                      v-model="filterSelectCategoryName"
+                      placeholder="Search vendor name"
+                      :options="categories"
+                      :taggable="true"
+                      label="name"
+                      track-by="id"
+                      :show-labels="false"
+                  >
+                  </multiselect>
+                </div>
+              </div>
+
+              <div class="col-xs-1">
+                <button class="search-button" type="button" @click="getData()">
+                  Search
+                </button>
+
+                <button
+                    class="reset-button ml-1"
+                    type="button"
+                    @click="
+                      filterSelectCategoryName = null;
+                    getData();
+                  "
+                >
+                  <i class="fas fa-undo"></i>
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
@@ -46,6 +103,31 @@
                 filter_type="filter">
                 <template v-slot:column_sl="{ index }">
                   <td>{{ index + 1 }}</td>
+                </template>
+
+                <template v-slot:column_product="{ entity }">
+                  <td>
+                    <span v-for="i in entity?.products" :key="i">
+                      {{ i?.name}}
+                    </span>
+                  </td>
+                </template>
+
+                <template v-slot:column_price="{ entity }">
+                  <td>
+                    <span v-for="i in entity?.products" :key="i">
+                      <i class="fa fa-star" style="color: #FFD700"></i>
+                      {{ i?.price}}
+                    </span>
+                  </td>
+                </template>
+
+                <template v-slot:column_description="{ entity }">
+                  <td>
+                    <span v-for="i in entity?.products" :key="i">
+                      {{ i?.description}}
+                    </span>
+                  </td>
                 </template>
 
                 <template v-slot:column_image="{ entity }">
@@ -187,6 +269,7 @@ import { useToast } from "vue-toastification";
 import { Field, Form, ErrorMessage } from "vee-validate";
 import * as yup from "yup";
 import Multiselect from "vue-multiselect";
+import Toggle from "@vueform/toggle";
 
 import Loading from "vue-loading-overlay";
 import "vue-loading-overlay/dist/css/index.css";
@@ -206,7 +289,8 @@ const base_url = useRuntimeConfig().public["baseUrl"];
 
 const table_header = [
   { label: "Sl", field: "sl", sortable: false },
-  { label: "Title", field: "name" },
+  { label: "Category Name", field: "name" },
+  { label: "Product Name", field: "product" },
   { label: "Description", field: "description" },
   { label: "Price", field: "price" },
   { label: "Image", field: "image" },
@@ -225,6 +309,13 @@ const image_file_size = ref("");
 const categories = ref([]);
 const selectCategory = ref(null);
 const check = ref(false);
+
+const filterShow = ref(false);
+const value = ref(false);
+const filterSelectCategoryName = ref(null);
+const toggle = () => {
+  filterShow.value = value.value;
+};
 
 const formData = ref({
   id: 0,
@@ -246,7 +337,7 @@ const getCatetories = async () => {
     });
 
   } catch (error) {
-    console.log("🚀 ~ file: index.vue:59 ~ getCatetories ~ error", error);
+    console.log("🚀 ~ file: index.vue:59  ~ error", error);
   }
 };
 
@@ -351,12 +442,16 @@ const getData = async (params = { url: null, filter: { rows: 10 } }) => {
     let filter = {};
     if (params.hasOwnProperty("filter")) {
       filter = params.filter;
+      if(filterSelectCategoryName.value){
+        filter.category_id = filterSelectCategoryName.value.id;
+      }
     }
 
     const response = await $fetch(url, {
       params: filter,
     });
     data.value = response;
+    console.log("data", data.value);
 
   } catch (error) {
     console.log(error);
@@ -371,7 +466,12 @@ function onEdit(entity) {
   formData.value = {
     id: entity?.id,
     name: entity?.name,
+    price: entity?.price,
     description: entity?.description,
+  };
+  selectCategory.value = {
+    id: entity?.category_id,
+    name: entity?.category?.name,
   };
   $("#staticBackdrop").modal("show");
 }

@@ -307,6 +307,7 @@ onMounted(() => getData());
 function onEdit(entity) {
     formData.value = {
         id: entity?.id,
+      name: entity?.name,
     };
     $("#staticBackdrop").modal("show");
 }
