@@ -37,8 +37,7 @@
                             <div class="card-header">
                                 <h3 class="card-title">Category List</h3>
                                 <button style="float: right" type="button" class="add-button" data-toggle="modal"
-                                    data-target="#staticBackdrop" @click="openModal"
-                                    v-if="checkPermissions('roles_create')">
+                                    data-target="#staticBackdrop" @click="openModal">
                                     <i class="fa fa-plus"></i> Add New
                                 </button>
                             </div>
@@ -59,10 +58,6 @@
 
                                 <template v-slot:column_action="{ entity }">
                                     <td>
-                                        <NuxtLink style="color: #dc3545" :to="'/roles/' + entity?.id"><i
-                                                class="fa fa-eye"></i></NuxtLink>
-
-                                        &nbsp;
                                         <span>
                                             <a href="javascript:" @click="onEdit(entity)"><i
                                                     class="fas fa-edit"></i></a>

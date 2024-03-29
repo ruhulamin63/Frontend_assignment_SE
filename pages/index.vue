@@ -34,31 +34,15 @@
         <div class="row">
 
           <div class="col-md-12">
-            <div class="row float-right">
-              <label>Filter</label>
-              <Toggle
-                  class="toggle-button ml-2"
-                  v-model="value"
-                  :name="'toggle'"
-                  :id="'toggle'"
-                  :onLabel="'On'"
-                  :offLabel="'Off'"
-                  :trueValue="true"
-                  :falseValue="false"
-                  :disabled="false"
-                  :required="false"
-                  @change="toggle()"
-              />
-            </div>
 
-            <div class="row" v-if="filterShow">
+            <div class="row">
               <div
                   class="col-md-3 col-sm-3 col-xs-4"
               >
                 <div class="form-group">
                   <multiselect
                       v-model="filterSelectCategoryName"
-                      placeholder="Search vendor name"
+                      placeholder="Search category name"
                       :options="categories"
                       :taggable="true"
                       label="name"
@@ -94,7 +78,7 @@
               <div class="card-header">
                 <h3 class="card-title">Product List</h3>
                 <button style="float: right" type="button" class="add-button" data-toggle="modal"
-                  data-target="#staticBackdrop" @click="openModal" v-if="checkPermissions('roles_create')">
+                  data-target="#staticBackdrop" @click="openModal">
                   <i class="fa fa-plus"></i> Add New
                 </button>
               </div>
@@ -139,9 +123,6 @@
 
                 <template v-slot:column_action="{ entity }">
                   <td>
-                    <NuxtLink style="color: #dc3545" :to="'/roles/' + entity?.id"><i class="fa fa-eye"></i></NuxtLink>
-
-                    &nbsp;
                     <span>
                       <a href="javascript:" @click="onEdit(entity)"><i class="fas fa-edit"></i></a>
 
@@ -270,9 +251,9 @@ import { Field, Form, ErrorMessage } from "vee-validate";
 import * as yup from "yup";
 import Multiselect from "vue-multiselect";
 import Toggle from "@vueform/toggle";
-
 import Loading from "vue-loading-overlay";
 import "vue-loading-overlay/dist/css/index.css";
+
 const loading = Loading;
 const isLoading = ref(false);
 const fullPage = ref(true);
@@ -313,7 +294,7 @@ const check = ref(false);
 const filterShow = ref(false);
 const value = ref(false);
 const filterSelectCategoryName = ref(null);
-const toggle = () => {
+const toggle = (event) => {
   filterShow.value = value.value;
 };
 
@@ -451,8 +432,6 @@ const getData = async (params = { url: null, filter: { rows: 10 } }) => {
       params: filter,
     });
     data.value = response;
-    console.log("data", data.value);
-
   } catch (error) {
     console.log(error);
   }

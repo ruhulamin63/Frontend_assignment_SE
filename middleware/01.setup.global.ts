@@ -3,7 +3,7 @@ import {defineNuxtRouteMiddleware, navigateTo} from "#app";
 
 export default defineNuxtRouteMiddleware((to, from) => {
     const auth = useAuthStore();
-    const guest_path = ['/login', '/forgot-password', '/reset-password'];
+    const guest_path = ['/login'];
     const all_access_path = ['/privacy-policy'];
 
     if(!all_access_path.includes(to.path)){
