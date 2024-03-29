@@ -1,0 +1,886 @@
+.error{
+    display: block;
+    color: red;
+    width: 100%;
+}
+
+.custom-navbar-background{
+    background-color: #BDEEFF !important;
+    color: #000 !important;
+    text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #000 !important;
+}
+
+/*.navbar-left-side-text{*/
+/*    text-decoration: none;*/
+/*}*/
+
+.navbar-user-info{
+    margin: 0;
+    padding-left: 1rem;
+    text-align: right;
+    line-height: 1.2;
+}
+
+.navbar-user-logo{
+    padding-left: 0.5rem !important;
+    padding-top: 0 !important;
+    margin-top: -4.1px;
+}
+
+.navbar-user-logo img{
+    height: 50px;
+}
+
+.left-logo {
+    /* float: left; */
+    line-height: .8;
+    margin-left: .8rem;
+    margin-right: .8rem;
+    margin-top: -3px;
+    max-height: 50px;
+    width: auto;
+}
+
+.right-logo {
+    /* float: right; */
+    line-height: .8;
+    /*margin-left: .8rem;*/
+    margin-right: .8rem;
+    margin-top: -3px;
+    max-height: 50px;
+    width: auto;
+}
+
+.brand-link{
+    padding: 0.3rem 0.5rem !important;
+}
+
+
+/* custom css for admin panel */
+.nav-treeview .nav-link{
+    font-size: 13px;
+}
+
+.nav-treeview .nav-link i{
+    margin: 0 5px 0 15px;
+}
+
+/* this section for login page start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.header {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+}
+.nav {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+.nav,
+.nav_item {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_logo,
+.nav_link,
+.button {
+    color: #fff;
+}
+.nav_logo {
+    font-size: 25px;
+}
+.nav_item {
+    column-gap: 25px;
+}
+.nav_link:hover {
+    color: #d9d9d9;
+}
+.button {
+    padding: 6px 24px;
+    border: 2px solid #fff;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.button:active {
+    transform: scale(0.98);
+}
+
+/* Home */
+.login-page {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../images/bteb-background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* From */
+.login-card-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-card-body h2 {
+    font-size: 30px;
+    color: #0b0217;
+    text-align: center;
+}
+
+.input_box {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+}
+.input_box input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 30px;
+    color: #333;
+    transition: all 0.2s ease;
+    border-bottom: 1.5px solid #aaaaaa;
+}
+.input_box input:focus {
+    border-color: #007F3D;
+}
+.input_box i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #707070;
+}
+.input_box i.email,
+.input_box i.password {
+    left: 0;
+}
+.input_box input:focus ~ i.email,
+.input_box input:focus ~ i.password {
+    color: #007F3D;
+}
+.input_box i.pw_hide {
+    right: 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+.option_field .text-small{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.form_container a {
+    color: #0275d8;
+    font-size: 12px;
+}
+.form_container a:hover {
+    text-decoration: underline;
+}
+
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+    column-gap: 8px;
+    white-space: nowrap;
+}
+
+.checkbox input {
+    accent-color: #007F3D;
+}
+.checkbox label {
+    font-size: 12px;
+    cursor: pointer;
+    user-select: none;
+    color: #0b0217;
+    margin-top: 7px;
+}
+.login-card-body .button {
+    background: #007F3D;
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+/* this section for login page end */
+.login-logo img{
+    height: 140px;
+    width: 140px;
+    object-fit: cover;
+    object-position: center;
+}
+/* this section for login page end */
+
+/* font bold and center show */
+.login_form .project-name{
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    color:#000;
+    font-size: 16px;
+}
+
+.login_form .login-page-button-logo{
+    height: 28px;
+    width: 310px;
+    object-fit: cover;
+    object-position: center;
+    margin: 19px auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* togglePassword */
+#togglePassword{
+    cursor: pointer;
+}
+
+/* this section for login page end */
+
+/* sidebar design section start */
+.main-sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    /*background: #fff;*/
+    z-index: 100;
+    transition: all 0.5s ease;
+    background: #074F68 !important;
+}
+
+.nav-item .nav-link{
+    color: #fff !important;
+}
+
+/* button custom style */
+.add-button{
+    background: #007F3D;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-button{
+    background: #007F3D;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0px;
+    height: 41px;
+}
+
+.date-search-button{
+    background: #007F3D;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 29px;
+    height: 38px;
+}
+
+/* how to search-button responsive */
+/* @media (max-width: 768px){
+    .search-button{
+        margin-top: 0;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+} */
+
+.update-button{
+    background: #007F3D;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 32px;
+    height: 37px;
+}
+
+body:not(.layout-fixed) .main-sidebar{
+    position: fixed !important;
+}
+
+/* footer section */
+/* how to main-footer hight redius */
+.footer-text{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/*footer-logo-img*/
+.footer-logo{
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    display: block;
+    }
+  
+.footer-logo-img{
+    height: auto;
+    margin-top: -1rem;
+}
+
+/* global font size change */
+/* @font-face {
+  font-family: "Kalpurush";
+  src: local("Kalpurush"),
+    url(~assets/kalpurush.ttf) format("truetype");
+} */
+
+body {
+    /* font-family: 'Kalpurush', Arial, sans-serif !important; */
+    font-size: 14px !important;
+}
+
+body h1{
+    font-size: 18px !important;
+}
+
+
+/* sidebar menu font-size change */
+.nav-sidebar .nav-item .nav-link p{
+    font-size: 15px !important;
+}
+
+.nav-sidebar .nav-item .nav-link i{
+    font-size: 14px !important;
+}
+
+.nav-sidebar .nav-treeview .nav-item .nav-link p{
+    font-size: 13px !important;
+}
+
+.nav-sidebar .nav-treeview .nav-item .nav-link i{
+    font-size: 12px !important;
+    padding-left: 6px !important;
+    padding-right: 5px !important;
+}
+
+/* .nav-sidebar .nav-treeview .nav-item .nav-link p{
+  padding: 5px 5px !important;
+} */
+
+.nav-sidebar .nav-treeview .nav-item .nav-link .sub-menu-text{
+    font-size: 12px !important;
+}
+
+.nav-sidebar .nav-treeview .nav-item .nav-link .sub-menu i{
+    font-size: 11px !important;
+    padding-left: 20px !important;
+    padding-right: 5px !important;
+}
+
+/* sidebar menu active background color change */
+.nav-sidebar .nav-item>.nav-link.active{
+    background: #007F3D !important;
+}
+
+/*.nav-sidebar .nav-item>.router-link-active{*/
+/*    background: #007F3D !important;*/
+/*}*/
+
+
+/* toggle-button custom style */
+.toggle-button{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 10px;
+}
+
+
+/* Navbar profile card */
+.dropdown-menu-right{
+    left: auto !important;
+    right: 0 !important;
+    margin-top: 10px !important;
+}
+
+/* this is external css file */
+.error{
+    display: block;
+    color: red;
+    width: 100%;
+}
+
+.page-link:focus{
+    z-index: unset !important;
+    outline: unset !important;
+    box-shadow: unset !important;
+}
+
+.custom-navbar-background{
+    background-color: #BDEEFF !important;
+    color: #000 !important;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #000 !important;
+}
+
+.navbar-user-info{
+    margin: 0;
+    padding-left: 1rem;
+    text-align: right;
+    line-height: 1.2;
+}
+
+.navbar-user-logo{
+    padding-left: 0.5rem !important;
+    padding-top: 0 !important;
+    margin-top: -4.1px;
+}
+
+.navbar-user-logo img{
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.navbar-user-name{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.left-logo {
+    /* float: left; */
+    line-height: .8;
+    margin-left: .8rem;
+    margin-right: .8rem;
+    margin-top: -3px;
+    max-height: 50px;
+    width: auto;
+}
+
+.right-logo {
+    /* float: right; */
+    line-height: .8;
+    margin-left: .8rem;
+    margin-right: .8rem;
+    margin-top: -3px;
+    max-height: 50px;
+    width: auto;
+}
+
+.brand-link{
+    padding: 0.3rem 0.5rem !important;
+}
+
+.dashboard-menu-img{
+    height: 150px;
+}
+
+.custom-card-title{
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.custom-btn{
+    padding: 0 !important;
+    vertical-align: unset !important;
+}
+
+.nav-treeview .nav-link{
+    font-size: 13px;
+}
+
+.nav-treeview .nav-link i{
+    margin: 0 5px 0 15px;
+}
+
+.notification-item{
+    white-space: unset !important;
+}
+
+.notification-unread{
+    background: #6a9d9d29 !important;
+}
+
+.img{
+    height: 140px;
+    width: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+/* this section for login page end */
+
+/* font bold and center show */
+.login_form .project-name{
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+    color:#000;
+    font-size: 16px;
+}
+
+.login_form .login-page-button-logo{
+  height: 25px;
+  width: 250px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-top: 20px;
+}
+
+/* this section for login page end */
+
+/* sidebar design section start */
+.main-sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background: #fff;
+  z-index: 100;
+  transition: all 0.5s ease;
+  background: #074F68 !important;
+}
+
+.nav-item .nav-link{
+  color: #fff !important;
+}
+
+/* button custom style */
+.add-button{
+  background: #007F3D;
+  border: none;
+  color: #fff;
+  padding: 0px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 2rem;
+}
+
+.next-page-add-button{
+  background: #007F3D;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 2rem;
+}
+
+
+
+.search-button{
+  background: #007F3D;
+  border: none;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 2rem;
+}
+
+.reset-button{
+  background: #074F68;
+  border: none;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 2rem;
+}
+
+.date-search-button{
+    background: #007F3D;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0px;
+    height: 2rem;
+}
+
+.date-district-upazila-union-search-button {
+    background: #007F3D;
+    border: none;
+    color: #fff;
+    padding: 2px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0px;
+    height: 2rem;
+}
+
+/* how to search-button responsive */
+/* @media (max-width: 768px){
+    .search-button{
+        margin-top: 0;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+} */
+
+.update-button{
+    background: #007F3D;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 32px;
+    height: 37px;
+}
+
+body:not(.layout-fixed) .main-sidebar{
+  position: fixed !important;
+}
+
+/* footer section */
+/* how to main-footer hight redius */
+.footer-text{
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/*footer-logo-img*/
+.footer-logo{
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.footer-logo-img{
+  height: auto;
+  margin-top: -1rem;
+}
+
+/* global font size change */
+/* @font-face {
+  font-family: "Kalpurush";
+  src: local("Kalpurush"),
+    url(~assets/kalpurush.ttf) format("truetype");
+} */
+
+body {
+  /* font-family: 'Kalpurush', Arial, sans-serif !important; */
+  font-size: 14px !important;
+}
+
+body h1{
+  font-size: 18px !important;
+}
+
+
+/* sidebar menu font-size change */
+.nav-sidebar .nav-item .nav-link p{
+  font-size: 15px !important;
+}
+
+.nav-sidebar .nav-item .nav-link i{
+  font-size: 14px !important;
+}
+
+.nav-sidebar .nav-treeview .nav-item .nav-link p{
+  font-size: 13px !important;
+}
+
+.nav-sidebar .nav-treeview .nav-item .nav-link i{
+  font-size: 12px !important;
+  padding-left: 6px !important;
+  padding-right: 5px !important;
+}
+
+/* .nav-sidebar .nav-treeview .nav-item .nav-link p{
+  padding: 5px 5px !important;
+} */
+
+.nav-sidebar .nav-treeview .nav-item .nav-link .sub-menu-text{
+  font-size: 12px !important;
+}
+
+.nav-sidebar .nav-treeview .nav-item .nav-link .sub-menu i{
+  font-size: 11px !important;
+  padding-left: 20px !important;
+  padding-right: 5px !important;
+}
+
+/* sidebar menu active background color change */
+.nav-sidebar .nav-item>.nav-link.active{
+  background: #007F3D !important;
+}
+
+.nav-sidebar .nav-item>.router-link-active{
+  background: #007F3D !important;
+}
+
+
+
+/* dashboard design section start */
+.small-box{
+  background-color: #fff !important;
+  cursor: pointer;
+}
+
+.small-box .icon{
+  color: #efeeee !important;
+}
+
+.small-box:hover .icon{
+  color: #007F3D !important;
+}
+
+/* toggle-button custom style */
+.toggle-button{
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 10px;
+}
+
+/* Form Design Start*/
+.form-control{
+  /* height: calc(2.25rem + 2px);
+  font-size: 1rem; */
+
+  height: 2rem !important;
+  font-size: 0.9rem !important;
+}
+
+textarea.form-control{
+  height: calc(2.25rem + 2px) !important;
+}
+
+.input-group-text{
+  /* font-size: 1rem; */
+
+  height: 2rem !important;
+  font-size: 0.9rem !important;
+}
+
+.multiselect{
+  /* min-height: 40px; */
+
+  min-height: 2rem !important;
+}
+
+.multiselect__tags{
+  /* font-size: 14px;
+  min-height: 40px; */
+
+  min-height: 2rem !important;
+  font-size: 0.9rem !important;
+  padding-top: 0.22rem !important;
+  padding-left: 0.75rem !important;
+}
+
+.multiselect, .multiselect__input, .multiselect__single{
+  /* font-size: 16px; */
+
+  font-size: 0.9rem !important;
+}
+
+.multiselect__input, .multiselect__single{
+  /* min-height: 20px;
+  line-height: 20px;
+  padding: 0 0 0 5px;
+  margin-bottom: 8px; */
+
+  min-height: unset !important; 
+  line-height: unset !important;
+  margin-bottom: unset !important;
+  padding: unset !important;
+}
+
+.multiselect__tag{
+  /* margin-bottom: 5px; */
+
+  margin-bottom: unset !important;
+}
+
+.multiselect__placeholder{
+  /* margin-bottom: 10px !important;
+  padding-top: 2px !important; */
+  
+  margin-bottom: unset !important;
+  padding-top: unset !important;
+}
+
+.multiselect__select{
+  /* width: 40px;
+  height: 38px;
+  padding: 4px 8px;
+  line-height: 16px; */
+
+  width: 30px !important;
+  height: 30px !important;
+  padding: 3px 4px !important;
+  line-height: 14px !important;
+}
+
+.multiselect__spinner{
+  /* width: 40px;
+  height: 38px; */
+
+  width: 30px !important;
+  height: 30px !important;
+}
+/* Form Design End*/

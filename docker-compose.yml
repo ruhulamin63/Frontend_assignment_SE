@@ -1,0 +1,17 @@
+version: '3'
+services:
+  dphe_ui_service:
+    container_name: dphe_ui_service
+    image: dphe_ui_service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8082:3000"
+    networks:
+      - dream_network
+    mem_limit: 2g
+
+networks:
+  dream_network:
+    external: true
