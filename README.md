@@ -1,4 +1,4 @@
-# Frontend_assignment_SE_ZinoSoft
+# Frontend_assignment_SE
 This is test technical test for software engineer position.
 
 I have used  "nuxt": "^3.4.3", and vueJs "vue": "^3.3.4",
